@@ -5,13 +5,13 @@ function App() {
   const [balance, setBalance] = useState(0);
 
   const fetchBalance = async () => {
-    const res = await fetch(`http://localhost:8080/api/auth/balance/${userId}`);
+    const res = await fetch(`https://bank-backend-adap.onrender.com/api/auth/balance/${userId}`);
     const data = await res.json();
     setBalance(data.balance);
   };
 
   const deposit = async () => {
-    await fetch(`http://localhost:8080/api/auth/deposit/${userId}`, {
+    await fetch(`https://bank-backend-adap.onrender.com/api/auth/deposit/${userId}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount: 50 })
