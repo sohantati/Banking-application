@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function App() {
-  const [userId, setUserId] = useState(1);
+  const [userId] = useState(1);
   const [balance, setBalance] = useState(0);
 
   const fetchBalance = async () => {
